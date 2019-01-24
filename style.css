@@ -1,0 +1,99 @@
+html,body{
+	width: 100%;
+	margin: 0;
+}
+
+.main{
+	width: 100%;
+}
+
+.bgImage{
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+	background-repeat: no-repeat;
+}
+
+.nav ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background: #222;
+}
+
+.nav ul li{
+	float: left;
+}
+
+.nav ul li a{
+	display: block;
+	color: #9d9d9d;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+.nav ul li:hover {
+	background-color: rgba(0, 0, 0, 0.7);
+	transition: .3s ease-in;
+}
+
+.nav ul li a:hover {
+	color: white;
+}
+
+.brand img{
+	height: 100%;
+}
+
+.brand>img{
+	display: block;
+}
+
+.img-responsive{
+	height: auto;
+	display: block;
+	max-width: 100%;
+}
+
+.brand-custom {
+	max-width: 65px;
+	display: block;
+	padding: 0;
+	margin-left: 0;
+}
+
+.navbar-brand {
+	float: left;
+	height: 45px;
+	line-height: 20px;
+}
+
+.container {
+	padding-right: 30px;
+	padding-left: 40px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.text-on-image{
+	position: absolute;
+	top: calc(50% - 60px);
+	color: #fff;
+}
+.text-on-image h1{
+	line-height: 1.1em;
+	font-family: ;
+	font-size: 3em;
+	font-weight: 700;
+}
+
+ul{
+	list-style-type: none;
+}
+
+.text-on-image li{
+	font-size: 1.1em;
+	padding: 10px 0 0 0;
+}
