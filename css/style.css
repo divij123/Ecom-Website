@@ -1,0 +1,315 @@
+html,body{
+	width: 100%;
+	margin: 0;
+}
+
+.main{
+	width: 100%;
+}
+
+.bgImage{
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+	background-repeat: no-repeat;
+}
+
+.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover  {
+	background-color: rgba(0, 0, 0, 0.7);
+	color: white;
+	transition: .3s ease-in;
+
+}
+ 
+.bg-dark {
+	background: #222 !important;
+}
+.navbar {
+	padding: 0px 0px;
+	max-height: 60px;
+}
+.brand img{
+	height: 100%;
+}
+
+.brand>img{
+	display: block;
+}
+
+.img-responsive{
+	height: auto;
+	display: block;
+	max-width: 100%;
+}
+
+.brand-custom {
+	max-width: 75px;
+	display: block;
+	padding: 0;
+	margin-left: 0;
+}
+
+a {
+	color: #000;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #000;
+}
+.navbar-right {
+	float: right !important;
+	margin-right: -15px;
+}
+
+.navbar-right a.mobile {
+    color: #fff;
+    margin-right: 5px;
+}
+
+.container {
+	padding-right: 30px;
+	padding-left: 40px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.text-on-image{
+	position: absolute;
+	top: calc(50% - 60px);
+	color: #fff;
+}
+.text-on-image h1{
+	line-height: 1.1em;
+	font-family: ;
+	font-size: 3em;
+	font-weight: 700;
+}
+
+ul{
+	list-style-type: none;
+	margin-left: 0px;
+}
+
+.text-on-image li{
+	font-size: 1.1em;
+	padding: 10px 0 0 0;
+}
+
+.header-text {
+	margin-left: 0px;
+}
+
+.free-link {
+	margin: 20px 0 0 0;
+    display: block;
+    width: 240px;
+    padding: 15px;
+    background: #1bd982;
+    font-size: 1.5em;
+    font-weight: 700;
+    border-radius: 4px;
+}
+.custom-right {
+	margin-left: 25px;
+}
+.afford-text {
+	position: absolute;
+	color: #fff;
+	left: 600px;
+}
+.faq{
+	color: #fff;
+    display: inline-block;
+    margin-right: 5px;
+    background: #000;
+    float: right;
+    padding: 10px;
+    vertical-align: top;
+ }
+
+ .no-color {
+ 	background-color: transparent;
+ }
+
+ .no-color:hover {
+ 	background-color: transparent;
+ }
+
+ .center {
+ 	float: none;
+ 	margin: 0 auto;
+
+ }
+
+ .rent-games {
+ 	margin: 10px 0;
+ }
+
+ .img {
+ 	display: block;
+ 	opacity: .7;
+ }
+
+ .img:hover{
+ 	opacity: 1;
+ }
+
+ .products {
+ 	padding: 60px 0;
+ }
+
+ .heading {
+ 	font-size: 2em;
+ 	text-transform: uppercase;
+ 	margin-bottom: 40px;
+ }
+
+ .buy-rent{
+ 	margin: 10px 0;
+ }
+.buy-rent-link {
+ 	color: #fff;
+    margin: 10px;
+    padding: 10px;
+    background: #5bc0de;
+    font-size: 1em;
+    text-align: center;
+    border-radius: 4px;
+    border-color: transparent;
+    font-weight: 700;
+    display: inline-block;	
+}
+
+.footer {
+	font-size: 1em;
+	padding: 3% 0;
+	background: #e1e1e1;
+}
+
+.footer p {
+	color: #000;
+	font-weight: bold;
+	margin-left: 1.5em;
+}
+
+footer ul li a, address, footer li span {
+    color: #777;
+    font-size: 0.875em;
+}
+
+.gradient {
+	background: url("../images/pubg-banner.jpg") no-repeat;
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+.black-opacity {
+	background-color: #000;
+	opacity: .7;
+	position: absolute;
+	z-index: 100;
+	width: 100%;
+	height: 100%;
+}
+
+.login {
+	background-color: #000;
+	width: 50%;
+	text-align: center;
+	height: 50%;
+	padding-top: 60px;
+	margin-left: 20%;
+	position: absolute;
+	z-index: 100;
+}
+
+
+ul.tabs {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  border-radius: 5px 5px 0 0;
+}
+ul.tabs li {
+  background: transparent;
+  color: #fff;
+  display: inline-block;
+  padding: 10px 0;
+  cursor: pointer;
+  flex: 1;
+  text-align: center;
+  font-weight: 600;
+}
+ul.tabs li.current {
+  background: #fff;
+  color: #444;
+}
+
+.tab-content {
+  display: none;
+  padding: 15px;
+}
+.tab-content.current {
+  display: inherit;
+  background: #fff;
+}
+
+input[type=text], input[type=password], input[type=email] {
+  background: #f1f1f1;
+  width: 100%;
+  padding: 15px 0;
+  margin-bottom: 10px;
+  border: none;
+  text-indent: 60px;
+}
+
+input[type=password] {
+  margin-bottom: 0;
+}
+
+input[type=submit] {
+  background: #3498db;
+  border: none;
+  padding: 10px 0;
+  text-align: center;
+  width: 100%;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+}
+input[type=submit]:hover {
+  background: #2980b9;
+}
+
+.input-icon {
+  position: absolute;
+  margin-top: 17px;
+  margin-left: 17px;
+}
+.input-icon:after {
+  content: "";
+  display: block;
+  height: 49px;
+  width: 1px;
+  background: #ddd;
+  position: absolute;
+  margin-top: -33px;
+  left: 30px;
+}
+
+.btn-container {
+  margin-top: 10px;
+}
+
+.btn-icon {
+  position: absolute;
+}
