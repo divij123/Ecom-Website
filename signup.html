@@ -1,6 +1,6 @@
 <html>
 	<head>
-	<title>Rentgames | Login</title>
+	<title>Rentgames | Signup</title>
 
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
@@ -56,7 +56,15 @@
 <article class="card-body">
 	<h4 class="card-title text-center mb-4 mt-1">Sign in</h4>
 	<hr>
-	<form method="post" action="php/index.php" enctype="multipart/form-data">
+	<form method="post" action="php/signup.php" enctype="multipart/form-data">
+	<div class="form-group">
+	<div class="input-group">
+		<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+		 </div>
+		<input name="name" class="form-control" placeholder="Enter Name" type="text">
+	</div> 
+	</div>
 	<div class="form-group">
 	<div class="input-group">
 		<div class="input-group-prepend">
@@ -70,9 +78,18 @@
 		<div class="input-group-prepend">
 		    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
 		 </div>
-	    <input name="pass" class="form-control" placeholder="******" type="password">
+	    <input name="pass" class="form-control" placeholder="Enter Password" type="password">
 	</div>
 	</div>
+	<div class="form-group">
+	<div class="input-group">
+		<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+		 </div>
+	    <input name="cpass" class="form-control" placeholder="Confirm Password" type="password">
+	</div>
+	</div>
+	
 	<div class="form-group">
 	<button type="submit" name="sub" class="btn btn-primary btn-block" value="Submit"> Login  </button>
 	</div> 
