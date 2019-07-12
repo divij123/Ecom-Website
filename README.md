@@ -1,2 +1,2 @@
 # Web_prog_lab
-web progamming lab website
+Ecommerce Website template using HTML5 , CSS and PHP and AJAX.
