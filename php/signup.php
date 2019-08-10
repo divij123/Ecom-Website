@@ -30,8 +30,8 @@ require_once("db.php");
             $result = mysqli_query($conn, $query);
             if ($result)
             {
-
-                echo "<script>window.open('../index.html', '_self')</script>";
+                echo "<script>alert('New User Registered!')</script>";
+                echo "<script>window.open('../login.html', '_self')</script>";
                /*$from = "divij.tripathi4@gmail.com";
                $subject = "Welcome";
                $message = "Welcome to our portal";

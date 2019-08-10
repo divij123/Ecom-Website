@@ -8,7 +8,7 @@ if (isset($_POST['sub']))
 	$email = mysqli_real_escape_string($conn,$_POST['uname']);
 	$pass = mysqli_real_escape_string($conn,$_POST['pass']);
 	$key = md5($pass);
-	$query = "select * from registration where email = '$email' AND password = '$key' ";
+	$query = "select * from registration where Email = '$email' AND Password = '$key' ";
 	$result = mysqli_query($conn, $query);
 	$check = mysqli_num_rows($result);
 	$row  = mysqli_fetch_row($result);
@@ -20,9 +20,8 @@ if (isset($_POST['sub']))
 	{
 		$_SESSION['logged_in'] = true;
         $_SESSION['Email'] = $email;
-        $_SESSION['Profile'] = $row['4'];
         $_SESSION['Name'] = $row['1'];
-        echo "<script>window.open('../index.html', '_self')</script>";
+        echo "<script>window.open('dashboard.php', '_self')</script>";
 	}
 }
 

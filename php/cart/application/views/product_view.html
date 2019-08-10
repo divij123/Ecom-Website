@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rent Games | Cart</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+ 
+ <style type="text/css">
+     
+body {
+background: #005AA7;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #FFFDE4, #005AA7);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #FFFDE4, #005AA7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+
+input[type="number"] {
+    background: transparent;
+}
+    
+ </style>
+</head>
+<body>
+<div class="container"><br/>
+    <h2>Rent Games Shopping Cart</h2>
+    <hr/>
+    <div class="row">
+        <div class="col-md-8">
+            <h4 class="jumbotron">Product</h4>
+            <div class="row">
+            <?php foreach ($data->result() as $row) : ?>
+                <div class="col-md-4">
+                    <div class="thumbnail">
+                      <img width="200" class="thumbnail" src="<?php echo base_url().'assets/images/'.$row->product_image;?>">
+                        <div class="caption">
+                            <h4><?php echo $row->product_name;?></h4>
+                            <div class="row">
+                                <div class="col-md-7">
+                                    <h4><?php echo number_format($row->product_price);?></h4>
+                                </div>
+                                <div class="col-md-5">
+                                    <input type="number" name="quantity" id="<?php echo $row->product_id;?>" value="1" class="quantity form-control">
+                                </div>
+                            </div>
+                            <br>
+                            <button class="add_cart btn btn-primary btn-block" data-productid="<?php echo $row->product_id;?>" data-productname="<?php echo $row->product_name;?>" data-productprice="<?php echo $row->product_price;?>">Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+            <?php endforeach;?>
+                 
+            </div>
+ 
+        </div>
+        <div class="col-md-4">
+            <h4>Shopping Cart</h4>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Items</th>
+                        <th>Price</th>
+                        <th>Qty</th>
+                        <th>Total</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="detail_cart">
+ 
+                </tbody>
+                     
+            </table>
+        </div>
+    </div>
+</div>
+ 
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.add_cart').click(function(){
+            var product_id    = $(this).data("productid");
+            var product_name  = $(this).data("productname");
+            var product_price = $(this).data("productprice");
+            var quantity      = $('#' + product_id).val();
+            $.ajax({
+                url : "<?php echo site_url('product/add_to_cart');?>",
+                method : "POST",
+                data : {product_id: product_id, product_name: product_name, product_price: product_price, quantity: quantity},
+                success: function(data){
+                    $('#detail_cart').html(data);
+                }
+            });
+        });
+ 
+         
+        $('#detail_cart').load("<?php echo site_url('product/load_cart');?>");
+ 
+         
+        $(document).on('click','.romove_cart',function(){
+            var row_id=$(this).attr("id"); 
+            $.ajax({
+                url : "<?php echo site_url('product/delete_cart');?>",
+                method : "POST",
+                data : {row_id : row_id},
+                success :function(data){
+                    $('#detail_cart').html(data);
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>

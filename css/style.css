@@ -32,6 +32,7 @@ html,body{
 	height: 100%;
 }
 
+
 .brand>img{
 	display: block;
 }
@@ -227,7 +228,7 @@ footer ul li a, address, footer li span {
 }
 
 
-.btn-outline-success, {
+.btn-outline-success {
     color: #c6d922;
     border-color: #c6d922;
 }
@@ -265,3 +266,125 @@ footer ul li a, address, footer li span {
 .filler {
 	height: 120px;
 }
+
+.num {
+	background-color: #c6d922;
+	color: #fff;
+	width: 15px;
+	height: 10px;
+	border-radius: 50%;
+	padding: 10px;
+}
+
+.error-message{
+	color: red;
+	display: none;
+}
+
+
+#cart_button
+{
+	margin-top:-100px;
+	margin-left:80px;
+	cursor:pointer;
+	float:right;
+}
+#cart_button img
+{
+	width:60px;
+	height:60px;
+}
+#cart_button input[type="button"]
+{
+	background:none;
+	border:none;
+	background-color:red;
+	border-radius:100%;
+	height:30px;
+	width:30px;
+	margin-top:0px;
+	color:white;
+	font-size:17px;
+	cursor:pointer;
+	position:relative;
+	top:-4px;
+	right:18px;
+}
+#mycart
+{
+	display:none;
+	background:white;
+	width:800px;
+	border:2px solid #000;
+	position:absolute; right:0px; top:90px;
+	z-index:1;
+}
+#mycart .cart_items
+{
+	border-bottom:1px dashed silver;
+	padding:20px;
+	padding-left:10px;
+}
+#mycart .cart_items img
+{
+	width:70px;
+	height:50px;
+	float:left;
+}
+#mycart .cart_items p
+{
+	margin:0px;
+	font-size:17px;
+	color:green;
+}
+
+#item_div{
+	width:86%;
+	margin:60px auto;
+	}
+.items{
+	padding:20px;
+	background-color:white;
+	width:250px;
+	height:350px;
+	margin-top:20px;
+	box-shadow:0px 0px 10px 0px #A4A4A4;
+	box-sizing:border-box;
+	float:left;
+	margin:20px;
+	position:relative;
+	transition: all .2s ease-out;
+}
+.items:hover {
+    transform: scale(1.05);
+}
+.items:hover input[type="button"]
+{
+	display:block;
+}
+.items input[type="button"]
+{
+	display:none;
+	background:none;
+	background-color:#3ADF00;
+	width:200px;
+	height:50px;
+	border:none;
+	font-size:20px;
+	color:white;
+	position:absolute;
+	top:150px;
+	left:20px;
+	cursor:pointer;
+}
+.items img
+{
+	width:200px;
+	height:200px;
+}
+
+.items p
+{
+	color: green;
+}
+.cap_status{color:#fff; font-size:20px; float:right; margin-right:30px;  }
